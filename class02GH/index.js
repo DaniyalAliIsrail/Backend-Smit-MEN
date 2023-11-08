@@ -1,4 +1,3 @@
-
 import express from "express";
 import cors from 'cors';
 import router from './routes/index.js'
@@ -9,7 +8,7 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 app.use(cors());
 
-//middelwear use for security purpose //? use jwt authentication
+//middelwear use for security purpose | har req pr chaly ga
 app.use("/",(req,res,next)=>{
   console.log("req agyai ....",req.query)
   if(req?.query?.apikey === "123"){
